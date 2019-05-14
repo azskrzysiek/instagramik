@@ -14,6 +14,10 @@
 
 Auth::routes();
 
+Route::get('/email', function () {
+    return new NewUserWelcomeMail();
+});
+
 Route::post('follow/{user}', 'FallowsController@store'); 
 
 Route::get('/', 'PostsController@index');
